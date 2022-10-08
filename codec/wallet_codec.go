@@ -15,7 +15,7 @@ func (c *WalletCodec) Encode(value interface{}) ([]byte, error) {
 		return nil, fmt.Errorf("Expected *pb.Wallet type, got %T", value)
 	}
 
-	return proto.Marshal(value.(*pb.DepositMoney))
+	return proto.Marshal(value.(*pb.Wallet))
 }
 
 func (c *WalletCodec) Decode(data []byte) (interface{}, error) {
