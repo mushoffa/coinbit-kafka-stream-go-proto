@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package pb;
+option go_package = "./pb;pb";
+
+message DepositMoney {
+    string wallet_id = 1;
+    double amount = 2;
+}
+
+message DepositMoneyHistory {
+    string wallet_id = 1;
+    repeated DepositMoney deposits = 2;
+}

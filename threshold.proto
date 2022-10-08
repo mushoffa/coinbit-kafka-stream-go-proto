@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package pb;
+option go_package = "./pb;pb";
+
+message Threshold {
+    string wallet_id = 1;
+    double total_deposit = 2;
+    bool above_threshold = 3;
+    int64 last_deposit_timestamp = 4;
+}
